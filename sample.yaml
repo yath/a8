@@ -1,0 +1,23 @@
+esphome:
+  name: sample
+  platform: ESP8266
+  board: nodemcuv2
+
+wifi:
+  ssid: "my-ssid"
+  password: "my-psk"
+
+logger:
+
+ota:
+
+sensor:
+    # keypad_sensor should really be a sensor component, not its own platform, but
+    # I couldn’t figure out how to put that into custom_components/.
+
+keypad_sensor:
+      pin:
+        number: D2
+        inverted: true
+        mode: INPUT
+      name: "My Keypad Sensor"
